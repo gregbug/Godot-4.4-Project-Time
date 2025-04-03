@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=3 uid="uid://bsvrxxiyf6m8d"]
+
+[ext_resource type="Script" uid="uid://dlhximlc8wj83" path="res://addons/project_time/widget_clock/clock.gd" id="1_hmuw4"]
+[ext_resource type="Texture2D" uid="uid://dxjsaxl6it48u" path="res://addons/project_time/widget_clock/assets/clock.png" id="1_nh2jw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nh2jw"]
+content_margin_left = 10.0
+content_margin_top = 2.0
+content_margin_right = 10.0
+
+[node name="Clock" type="PanelContainer"]
+clip_contents = true
+offset_right = 141.0
+offset_bottom = 36.0
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+script = ExtResource("1_hmuw4")
+
+[node name="ClockTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 5.0
+ignore_time_scale = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+clip_contents = true
+layout_mode = 2
+
+[node name="ClockLeft" type="TextureRect" parent="HBoxContainer"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("1_nh2jw")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="TimeLabel" type="Label" parent="HBoxContainer"]
+unique_name_in_owner = true
+clip_contents = true
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.986752, 0.986752, 0.986752, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nh2jw")
+text = "Thu 03 Apr 22:46"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ClockRight" type="TextureRect" parent="HBoxContainer"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("1_nh2jw")
+expand_mode = 2
+stretch_mode = 5
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="timeout" from="ClockTimer" to="." method="_on_clock_timer_timeout"]

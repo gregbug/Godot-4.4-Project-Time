@@ -1,0 +1,33 @@
+keys,en,it,es,fr,de
+
+PROJECT_TIME,Project:,Progetto:,Proyecto:,Projet:,Projektzeit:
+PROJECT_PAUSED,Project (PAUSED):,Progetto (IN PAUSA):,Proyecto (PAUSADO):,Projet (EN PAUSE):,Projekt (PAUSIERT):
+
+SESSION_LABEL,Session:,Sessione:,Sesión:,Session:,Sitzung:
+
+IDLE_LABEL,Idle:,Inattivo:,Inactivo:,Inactivité:,Leerlaufzeit:
+IDLE_AFTER_LABEL,Idle After:,Inattivo dopo:,Inactivo:,Inactivité:,Leerlaufzeit:
+EXTERNAL_LABEL,External Apps:,App Esterne:,Tiempo Externo:,Temps Externe:,Externe Zeit:
+
+REST_CHECKBOX,Rest Reminder,Ricorda Riposo,Tiempo de Descanso,Temps de Repos,Ruhezeit
+
+PAUSE_BUTTON,Pause,Pausa,Pausa,Pause,Pause
+RESUME_BUTTON,Resume,Riprendi,Reanudar,Reprendre,Fortsetzen
+REPORT_BUTTON,Generate Project Report,Genera Report Progetto,Generar Informe,Générer Rapport,Bericht Erstellen
+
+REST_LABEL,no rest time.,nessun riposo.,Sin descanso.,pas de repos.,keine Ruhe.
+REST_DIALOG_TITLE,Rest Time Alert,Avviso di Riposo,Alerta de Tiempo de Descanso,Alerte Temps de Repos,Ruhezeit-Warnung
+REST_DIALOG_TEXT,It's time to take a break!,È ora di fare una pausa!,¡Es hora de tomar un descanso!,C'est l'heure de faire une pause!,Zeit für eine Pause!
+REST_OK,No! let me code!,No! lasciami lavorare,¡No! ¡Déjame codificar!,Non ! laisse-moi coder !,Nein! Lass mich programmieren!
+CLEAR_ALL_TITLE,Clear All Data,Cancella Tutti i Dati,Borrar Todos los Datos,Effacer Toutes les Données,Alle Daten Löschen
+CLEAR_ALL_TEXT,Are you sure you want to clear all time statistics?\n\nDo you want to continue?,Sei sicuro di voler cancellare tutte le statistiche ?\n\nVuoi continuare?,¿Estás seguro de que quieres borrar todas las estadísticas de tiempo?\n\n¿Quieres continuar?,Êtes-vous sûr de vouloir effacer toutes les statistiques de temps?\n\nVoulez-vous continuer?,Sind Sie sicher dass Sie alle Zeitstatistiken löschen möchten?\n\nMöchten Sie fortfahren?
+
+CLEAR_SESSION_TITLE,Clear Session...,Cancella Sessione...,Borrar sesión...,Session claire...,Sitzung löschen...
+CLEAR_SESSION_TEXT,Clear current session time statistics?\n\nDo you want to continue?,Cancellare le statistiche della sessione corrente?\n\nVuoi continuare?,¿Borrar las estadísticas de tiempo de la sesión actual?\n\n¿Quieres continuar?,Effacer les statistiques de temps de la session en cours?\n\nVoulez-vous continuer?,Aktuelle Sitzungszeitstatistiken löschen?\n\nMöchten Sie fortfahren?
+
+CLEAR_TRACK_TITLE,Clear Track...,Cancella Traccia...,Borrar sesión...,Pista claire...,Spur abbrechen...
+CLEAR_TRACK_TEXT,Are you sure to remove '%s' time track?\n\nDo you want to continue?,Sei sicuro di rimuovere la traccia '%s' ?\n\nVuoi continuare?,¿Estás seguro de eliminar la pista '%s' ?\n\n¿Quieres continuar?,Êtes-vous sûr de supprimer la piste '%s' ?\n\nVoulez-vous continuer?,Sind Sie sicher dass Sie die Zeitspur '%s' entfernen möchten? \n\nMöchten Sie fortfahren?
+
+BTN_OK,Ok,Ok,Ok,Ok,Ok
+BTN_CANCEL,Cancel,Annulla,Cancelar,Annuler,Stornieren
+

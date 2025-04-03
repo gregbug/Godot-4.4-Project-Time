@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://o68o2rfph1ln"
+
+[deps]
+
+files=["res://addons/project_time/helpers/translations/languages.en.translation", "res://addons/project_time/helpers/translations/languages.it.translation", "res://addons/project_time/helpers/translations/languages.es.translation", "res://addons/project_time/helpers/translations/languages.fr.translation", "res://addons/project_time/helpers/translations/languages.de.translation"]
+
+source_file="res://addons/project_time/helpers/translations/languages.csv"
+dest_files=["res://addons/project_time/helpers/translations/languages.en.translation", "res://addons/project_time/helpers/translations/languages.it.translation", "res://addons/project_time/helpers/translations/languages.es.translation", "res://addons/project_time/helpers/translations/languages.fr.translation", "res://addons/project_time/helpers/translations/languages.de.translation"]
+
+[params]
+
+compress=true
+delimiter=0
