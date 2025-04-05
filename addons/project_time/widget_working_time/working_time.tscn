@@ -1,0 +1,406 @@
+[gd_scene load_steps=8 format=3 uid="uid://c6s2mnf6u6f3m"]
+
+[ext_resource type="Script" uid="uid://igq0hmiflupo" path="res://addons/project_time/widget_working_time/working_time.gd" id="1_hwx3f"]
+[ext_resource type="Texture2D" uid="uid://dxjsaxl6it48u" path="res://addons/project_time/widget_clock/assets/clock.png" id="2_whiae"]
+[ext_resource type="Texture2D" uid="uid://ca08yv1p1pe51" path="res://addons/project_time/widget_clock/assets/night.png" id="3_u3b4m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nk3sk"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="Image" id="Image_nk3sk"]
+data = {
+"data": PackedByteArray(255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 92, 92, 0, 255, 92, 92, 0, 255, 92, 92, 0, 255, 92, 92, 0, 255, 92, 92, 0, 255, 92, 92, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 0, 255, 92, 92, 127, 255, 92, 92, 0, 255, 92, 92, 0, 255, 92, 92, 0, 255, 92, 92, 0, 255, 92, 92, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 0, 255, 93, 93, 255, 255, 92, 92, 127, 255, 92, 92, 0, 255, 92, 92, 0, 255, 92, 92, 0, 255, 92, 92, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 92, 92, 127, 255, 92, 92, 0, 255, 92, 92, 0, 255, 92, 92, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 92, 92, 127, 255, 92, 92, 0, 255, 92, 92, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 92, 92, 0, 255, 92, 92, 0, 255, 92, 92, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 231, 255, 90, 90, 54, 255, 94, 94, 57, 255, 93, 93, 233, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 231, 255, 90, 90, 54, 255, 94, 94, 57, 255, 93, 93, 233, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 0, 255, 93, 93, 0, 255, 91, 91, 0, 255, 91, 91, 0, 255, 91, 91, 42, 255, 90, 90, 0, 255, 94, 94, 0, 255, 91, 91, 42, 255, 93, 93, 233, 255, 92, 92, 232, 255, 93, 93, 41, 255, 90, 90, 0, 255, 94, 94, 0, 255, 91, 91, 42, 255, 93, 93, 233, 255, 92, 92, 232, 255, 92, 92, 0, 255, 92, 92, 0, 255, 91, 91, 0, 255, 91, 91, 0, 255, 91, 91, 0, 255, 91, 91, 45, 255, 93, 93, 44, 255, 91, 91, 0, 255, 91, 91, 42, 255, 91, 91, 42, 255, 93, 93, 0, 255, 91, 91, 45, 255, 93, 93, 44, 255, 91, 91, 0, 255, 91, 91, 42, 255, 91, 91, 42, 255, 91, 91, 0, 255, 91, 91, 0, 255, 91, 91, 0, 255, 91, 91, 0, 255, 91, 91, 45, 255, 92, 92, 235, 255, 92, 92, 234, 255, 89, 89, 43, 255, 91, 91, 0, 255, 91, 91, 0, 255, 91, 91, 45, 255, 92, 92, 235, 255, 92, 92, 234, 255, 89, 89, 43, 255, 91, 91, 0, 255, 91, 91, 0, 255, 91, 91, 0, 255, 91, 91, 0, 255, 92, 92, 0, 255, 92, 92, 0, 255, 92, 92, 235, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 233, 255, 91, 91, 59, 255, 92, 92, 61, 255, 92, 92, 235, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 233, 255, 91, 91, 59, 255, 92, 92, 61, 255, 92, 92, 0, 255, 92, 92, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0, 255, 93, 93, 0),
+"format": "RGBA8",
+"height": 16,
+"mipmaps": false,
+"width": 16
+}
+
+[sub_resource type="ImageTexture" id="ImageTexture_c76nn"]
+image = SubResource("Image_nk3sk")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ogaeb"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="WorkingTime" type="ScrollContainer"]
+custom_minimum_size = Vector2(300, 530)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+follow_focus = true
+script = ExtResource("1_hwx3f")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nk3sk")
+
+[node name="Margin" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 4
+
+[node name="Layout" type="VBoxContainer" parent="PanelContainer/Margin"]
+layout_mode = 2
+
+[node name="PaddingTop" type="Control" parent="PanelContainer/Margin/Layout"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/Margin/Layout"]
+layout_mode = 2
+
+[node name="SpaceLeft" type="Label" parent="PanelContainer/Margin/Layout/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_alignment = 1
+
+[node name="ClockLeft" type="TextureRect" parent="PanelContainer/Margin/Layout/HBoxContainer"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+size_flags_horizontal = 8
+texture = ExtResource("2_whiae")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="WidgetTitle" type="Label" parent="PanelContainer/Margin/Layout/HBoxContainer"]
+layout_mode = 2
+text = "Working Time"
+horizontal_alignment = 1
+
+[node name="Clockright" type="TextureRect" parent="PanelContainer/Margin/Layout/HBoxContainer"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("2_whiae")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="SpaceRight" type="Label" parent="PanelContainer/Margin/Layout/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_alignment = 1
+
+[node name="HSeparator3" type="HSeparator" parent="PanelContainer/Margin/Layout"]
+layout_mode = 2
+
+[node name="Project" type="HBoxContainer" parent="PanelContainer/Margin/Layout"]
+layout_mode = 2
+
+[node name="ProjectLabel" type="Label" parent="PanelContainer/Margin/Layout/Project"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Project Time:"
+horizontal_alignment = 2
+
+[node name="ProjectValue" type="Label" parent="PanelContainer/Margin/Layout/Project"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "00:00:25"
+horizontal_alignment = 2
+
+[node name="ClearButton" type="Button" parent="PanelContainer/Margin/Layout/Project"]
+layout_mode = 2
+icon = SubResource("ImageTexture_c76nn")
+flat = true
+
+[node name="ProjectTrackContainer" type="VBoxContainer" parent="PanelContainer/Margin/Layout"]
+layout_mode = 2
+
+[node name="HSeparator4" type="HSeparator" parent="PanelContainer/Margin/Layout"]
+layout_mode = 2
+
+[node name="Session" type="HBoxContainer" parent="PanelContainer/Margin/Layout"]
+layout_mode = 2
+
+[node name="SessionLabel" type="Label" parent="PanelContainer/Margin/Layout/Session"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Current Session"
+horizontal_alignment = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="PanelContainer/Margin/Layout/Session"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 25.0
+value = 25.0
+
+[node name="SessionValue" type="Label" parent="PanelContainer/Margin/Layout/Session"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "00:00:25"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="ClearButton" type="Button" parent="PanelContainer/Margin/Layout/Session"]
+layout_mode = 2
+icon = SubResource("ImageTexture_c76nn")
+flat = true
+
+[node name="HSeparator5" type="HSeparator" parent="PanelContainer/Margin/Layout"]
+layout_mode = 2
+
+[node name="PaddingBottom4" type="Control" parent="PanelContainer/Margin/Layout"]
+layout_mode = 2
+
+[node name="AdditionalInfo" type="MarginContainer" parent="PanelContainer/Margin/Layout"]
+layout_mode = 2
+
+[node name="Container" type="PanelContainer" parent="PanelContainer/Margin/Layout/AdditionalInfo"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nk3sk")
+
+[node name="Margin" type="MarginContainer" parent="PanelContainer/Margin/Layout/AdditionalInfo/Container"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 6
+
+[node name="Layout" type="VBoxContainer" parent="PanelContainer/Margin/Layout/AdditionalInfo/Container/Margin"]
+layout_mode = 2
+
+[node name="ExternalApp" type="HBoxContainer" parent="PanelContainer/Margin/Layout/AdditionalInfo/Container/Margin/Layout"]
+layout_mode = 2
+
+[node name="ExternalLabel" type="Label" parent="PanelContainer/Margin/Layout/AdditionalInfo/Container/Margin/Layout/ExternalApp"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "External Time"
+horizontal_alignment = 2
+
+[node name="ExternalValue" type="Label" parent="PanelContainer/Margin/Layout/AdditionalInfo/Container/Margin/Layout/ExternalApp"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "00:00:00"
+horizontal_alignment = 2
+
+[node name="IdleTime" type="HBoxContainer" parent="PanelContainer/Margin/Layout/AdditionalInfo/Container/Margin/Layout"]
+layout_mode = 2
+
+[node name="IdleLabel" type="Label" parent="PanelContainer/Margin/Layout/AdditionalInfo/Container/Margin/Layout/IdleTime"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Idle Time"
+horizontal_alignment = 2
+
+[node name="IdleValue" type="Label" parent="PanelContainer/Margin/Layout/AdditionalInfo/Container/Margin/Layout/IdleTime"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "00:00:00"
+horizontal_alignment = 2
+
+[node name="IdleTimeControl" type="HBoxContainer" parent="PanelContainer/Margin/Layout/AdditionalInfo/Container/Margin/Layout"]
+layout_mode = 2
+
+[node name="IdleLabel" type="Label" parent="PanelContainer/Margin/Layout/AdditionalInfo/Container/Margin/Layout/IdleTimeControl"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Idle Time after:"
+vertical_alignment = 1
+
+[node name="IdleTime" type="SpinBox" parent="PanelContainer/Margin/Layout/AdditionalInfo/Container/Margin/Layout/IdleTimeControl"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+min_value = 1.0
+max_value = 120.0
+value = 5.0
+rounded = true
+alignment = 2
+suffix = "min"
+select_all_on_focus = true
+
+[node name="PaddingBottom1" type="Control" parent="PanelContainer/Margin/Layout"]
+layout_mode = 2
+
+[node name="RestTime" type="MarginContainer" parent="PanelContainer/Margin/Layout"]
+layout_mode = 2
+
+[node name="RestContainer" type="PanelContainer" parent="PanelContainer/Margin/Layout/RestTime"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nk3sk")
+
+[node name="RestTimeMargin" type="MarginContainer" parent="PanelContainer/Margin/Layout/RestTime/RestContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 6
+
+[node name="RestLayout" type="VBoxContainer" parent="PanelContainer/Margin/Layout/RestTime/RestContainer/RestTimeMargin"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/Margin/Layout/RestTime/RestContainer/RestTimeMargin/RestLayout"]
+layout_mode = 2
+
+[node name="SpaceLeft" type="Label" parent="PanelContainer/Margin/Layout/RestTime/RestContainer/RestTimeMargin/RestLayout/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_alignment = 1
+
+[node name="Clockleft" type="TextureRect" parent="PanelContainer/Margin/Layout/RestTime/RestContainer/RestTimeMargin/RestLayout/HBoxContainer"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+size_flags_horizontal = 8
+texture = ExtResource("3_u3b4m")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="RestTimeTitle" type="Label" parent="PanelContainer/Margin/Layout/RestTime/RestContainer/RestTimeMargin/RestLayout/HBoxContainer"]
+layout_mode = 2
+text = "Rest Time Reminder"
+horizontal_alignment = 1
+
+[node name="Clockright" type="TextureRect" parent="PanelContainer/Margin/Layout/RestTime/RestContainer/RestTimeMargin/RestLayout/HBoxContainer"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("3_u3b4m")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="RestRight" type="Label" parent="PanelContainer/Margin/Layout/RestTime/RestContainer/RestTimeMargin/RestLayout/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_alignment = 1
+
+[node name="chkRestTime" type="CheckBox" parent="PanelContainer/Margin/Layout/RestTime/RestContainer/RestTimeMargin/RestLayout"]
+layout_mode = 2
+text = "Rest Time"
+
+[node name="Controls" type="HBoxContainer" parent="PanelContainer/Margin/Layout/RestTime/RestContainer/RestTimeMargin/RestLayout"]
+layout_mode = 2
+
+[node name="RestPogressBar" type="ProgressBar" parent="PanelContainer/Margin/Layout/RestTime/RestContainer/RestTimeMargin/RestLayout/Controls"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_styles/fill = SubResource("StyleBoxFlat_ogaeb")
+max_value = 2700.0
+show_percentage = false
+
+[node name="RestValue" type="Label" parent="PanelContainer/Margin/Layout/RestTime/RestContainer/RestTimeMargin/RestLayout/Controls/RestPogressBar"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -24.5
+offset_bottom = 24.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "no rest time."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RestSpinBox" type="SpinBox" parent="PanelContainer/Margin/Layout/RestTime/RestContainer/RestTimeMargin/RestLayout/Controls"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+min_value = 1.0
+max_value = 240.0
+value = 16.0
+alignment = 2
+suffix = "min"
+select_all_on_focus = true
+
+[node name="PaddingTop" type="Control" parent="PanelContainer/Margin/Layout/RestTime/RestContainer/RestTimeMargin/RestLayout"]
+layout_mode = 2
+
+[node name="PaddingBottom2" type="Control" parent="PanelContainer/Margin/Layout"]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/Margin/Layout"]
+layout_mode = 2
+
+[node name="Buttons" type="HBoxContainer" parent="PanelContainer/Margin/Layout"]
+layout_mode = 2
+
+[node name="ResumeButton" type="Button" parent="PanelContainer/Margin/Layout/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "Resume"
+icon = SubResource("ImageTexture_c76nn")
+
+[node name="PauseButton" type="Button" parent="PanelContainer/Margin/Layout/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Pause"
+icon = SubResource("ImageTexture_c76nn")
+
+[node name="Report" type="HBoxContainer" parent="PanelContainer/Margin/Layout"]
+layout_mode = 2
+
+[node name="ReportButton" type="Button" parent="PanelContainer/Margin/Layout/Report"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Generate Report"
+icon = SubResource("ImageTexture_c76nn")
+
+[node name="HSeparator6" type="HSeparator" parent="PanelContainer/Margin/Layout"]
+layout_mode = 2
+
+[node name="PaddingBottom3" type="Control" parent="PanelContainer/Margin/Layout"]
+layout_mode = 2
+
+[node name="Timer" type="Timer" parent="."]
+ignore_time_scale = true
+
+[node name="RestDialog" type="AcceptDialog" parent="."]
+title = "Rest time!"
+initial_position = 2
+size = Vector2i(297, 106)
+unresizable = true
+ok_button_text = "No! let me code!"
+dialog_text = "ok it's time to take a break!"
+dialog_autowrap = true
+
+[node name="ClearAllDialog" type="ConfirmationDialog" parent="."]
+auto_translate_mode = 1
+size = Vector2i(400, 200)
+dialog_text = "Clear all recorded working time statistics?
+(Total time, Session, Idle, Rest timer)
+
+Do you want to continue ?"
+dialog_autowrap = true
+
+[node name="ClearTrackDialog" type="ConfirmationDialog" parent="."]
+auto_translate_mode = 1
+position = Vector2i(0, 36)
+size = Vector2i(400, 200)
+dialog_text = "Clear current session time statistics?
+
+Do you want to continue ?"
+dialog_autowrap = true
+
+[connection signal="pressed" from="PanelContainer/Margin/Layout/Project/ClearButton" to="." method="_on_clear_button_pressed"]
+[connection signal="pressed" from="PanelContainer/Margin/Layout/Session/ClearButton" to="." method="_on_clear_session_button_pressed"]
+[connection signal="value_changed" from="PanelContainer/Margin/Layout/AdditionalInfo/Container/Margin/Layout/IdleTimeControl/IdleTime" to="." method="_on_spin_box_idle_value_changed"]
+[connection signal="pressed" from="PanelContainer/Margin/Layout/RestTime/RestContainer/RestTimeMargin/RestLayout/chkRestTime" to="." method="_on_chk_rest_time_pressed"]
+[connection signal="value_changed" from="PanelContainer/Margin/Layout/RestTime/RestContainer/RestTimeMargin/RestLayout/Controls/RestSpinBox" to="." method="_on_rest_spin_box_value_changed"]
+[connection signal="pressed" from="PanelContainer/Margin/Layout/Buttons/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="PanelContainer/Margin/Layout/Buttons/PauseButton" to="." method="_on_pause_button_pressed"]
+[connection signal="pressed" from="PanelContainer/Margin/Layout/Report/ReportButton" to="." method="_generate_report"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="canceled" from="RestDialog" to="." method="_on_rest_dialog_canceled"]
+[connection signal="confirmed" from="RestDialog" to="." method="_on_rest_dialog_confirmed"]
+[connection signal="confirmed" from="ClearAllDialog" to="." method="_on_clear_all_dialog_confirmed"]
+[connection signal="confirmed" from="ClearTrackDialog" to="." method="_on_clear_session_dialog_confirmed"]
